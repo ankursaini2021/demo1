@@ -1,0 +1,175 @@
+1: Recursion usually stops when the Java Runtime encounters an IF or ELSE statement with a RETURN statement. State TRUE or FALSE.
+A) FALSE
+B) TRUE
+C) -
+D) -
+B
+
+
+
+2:
+
+void print(int n)
+{
+  if (n == 0)
+    return;
+ 
+  printf("%d", n%2);
+  
+  print(n/2);
+}  
+What will be the output of print(12).
+
+
+
+
+
+
+
+
+
+
+3:
+
+#include<stdio.h>
+main()
+{
+    int a;
+    a=f1(10);
+    printf("%d",a);
+}
+f1(int b)
+{
+    if(b==0)
+        return 0;
+    else
+    {
+        printf("a");
+        f1(b--);
+    }
+}
+a) 9 times
+b) 10 times
+c) 0 times
+d) Infinite number of times
+
+
+
+
+
+
+
+
+
+
+
+
+
+4: What will be the output of the following C code?
+
+#include<stdio.h>
+main()
+{
+    int n=10;
+    int f(int n);
+    printf("%d",f(n));
+}
+int f(int n)
+{
+    if(n>0)
+        return(n+f(n-2));
+}
+a) 10
+b) 80
+c) 30
+d) Error
+View Answer
+
+Answer: c
+Explanation: The recursive function returns n+f(n-2) till 10>0.
+Therefore, the above code will be evaluated as: 10+8+6+4+2, which is equal to 30.
+
+
+
+
+
+
+
+5: What will be the output of the following C code if the input given to the code shown below is “sanfoundry”?
+
+#include<stdio.h>
+#define NL '\n'
+main()
+{
+    void f(void);
+    printf("enter the word\n");
+    f();
+}
+void f(void)
+{
+    char c;
+    if((c=getchar())!=NL)
+{
+f();
+    printf("%c",c);
+}
+return;
+}
+a) sanfoundry
+b) infinite loop
+c) yrdnuofnas
+d) fnasyrdnuo
+View Answer
+
+Answer: c
+Explanation: The above code prints the reverse of the word entered. The recursive function terminates when getchar() is equal to null.
+
+
+
+
+
+
+6:void my_recursive_function(int n)
+{
+     if(n == 0)
+     return;
+     my_recursive_function(n-1);
+     printf("%d ",n);
+}
+int main()
+{
+     my_recursive_function(10);
+     return 0;
+}
+a) Prints the numbers from 10 to 1
+b) Prints the numbers from 10 to 0
+c) Prints the numbers from 1 to 10
+d) Prints the numbers from 0 to 10
+View Answer
+
+Answer: c
+Explanation: The above code prints the numbers from 1 to 10.....
+
+
+
+
+
+What is the output of Java code snippet?
+short k=1;
+k += 2;
+System.out.println(k);
+A) 1
+B) 2
+C) 3
+D) Compiler error about Type Casting
+C
+
+
+
+k = k + 1; //Error
+k += 1; //Works
+k++; //Works
+
+
+
+
